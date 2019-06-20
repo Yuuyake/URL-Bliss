@@ -6,7 +6,7 @@
 │    ╚██████╔╝██║  ██║███████╗    ██████╔╝███████╗██║███████║███████║
 │     ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝╚══════╝╚══════╝
 │
-│ emre.ekinci@teb.com.tr
+│ yunusemrem@windowslive.com
 │ 05550453000                                       
 │        
 │      TODO:
@@ -33,8 +33,8 @@ namespace urlbliss {
     class Program {
         // Relative path can be more reliable rather than absulate
         // .exe and "urlbliss.txt" files should be at the same location
-        private static string urlblissFileName = @"urlbliss.txt"; // @"C:\Users\P31908\Desktop\url_bliss.txt" 
-        private static string urlblissBACKUP = @"urlbliss_BACKUP.txt"; // @"C:\Users\P31908\Desktop\url_bliss.txt" 
+        private static string urlblissFileName = @"urlbliss.txt"; // 
+        private static string urlblissBACKUP = @"urlbliss_BACKUP.txt"; 
         // Because of that the urlbliss file and its content might be too large to handle 
         // alteration operations on memory can be problematic, so using a tampon file is better
         private static string inputFileName = @"import.txt";
@@ -93,14 +93,18 @@ namespace urlbliss {
                 }
                 else {
                     // i did not find this "else" is working properly, so Exit(1)
-                    throw new ArgumentException("\n │\t├─ !No proxy detected.\n\tSet proxy to \"http://mcafeewgf5.int.teb.com.tr:80\"");
-                    Uri newUri = new Uri("http://mcafeewgf5.int.teb.com.tr:80");
+                    throw new ArgumentException("\n │\t├─ !No proxy detected.\n\tSet proxy to MYPROXY");
+                    Uri newUri = new Uri("MYPROXY");
                     // Associate the newUri object to 'myProxySetting' object so that new myProxy settings can be set.
                     myProxySetting.Address = newUri;
                 }
                 // Setting User Creds to pass proxy
                 string userID = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\')[1];
-                Console.Write("\n │\t├─ UserID: " + userID);
+                Console.Write("\n │\t├─ UserID: ");
+                if(userID == "unknown")
+                           userID = Console.ReadLine();
+                else
+                           Console.Write(userID);
                 Console.Write("\n │\t├─ Password: ");
                 string pass = Helpers.darker(); // ask and save user password on the quiet
                 myProxySetting.Credentials = new NetworkCredential(userID, pass);
@@ -394,7 +398,6 @@ namespace urlbliss {
 
                 // syntax is like = "*GivenUrl*" "GivenComment dd.mm.yy username" + linebreak 
                 string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\')[1];
-                userName = userName.Length < 3 || userName.Length > 10 || userName.Contains("P") != true ? "unknown" : userName;
                 string textToWrite = "\"*"
                     + URL
                     + "*\" \""
