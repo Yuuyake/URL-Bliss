@@ -5,4 +5,4 @@ Prevents malformation.
 
 Friendly User Interface
 
-![Alt text](/URL-Bliss/Resources/ScreenShoot.png?raw=true "")
+![Alt text](/Resources/ScreenShoot.png?raw=true "")
