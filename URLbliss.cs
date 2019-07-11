@@ -6,8 +6,7 @@
 │    ╚██████╔╝██║  ██║███████╗    ██████╔╝███████╗██║███████║███████║
 │     ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝╚══════╝╚══════╝
 │
-│ emre.ekinci@teb.com.tr
-│ 05550453000                                       
+│ yunusemrem@windowslive.com                                    
 │        
 │      TODO:
            > dosyada benzerlikleri bul algoritma ile

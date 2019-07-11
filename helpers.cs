@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*                                              
+│    ██╗   ██╗██████╗ ██╗         ██████╗ ██╗     ██╗███████╗███████╗
+│    ██║   ██║██╔══██╗██║         ██╔══██╗██║     ██║██╔════╝██╔════╝
+│    ██║   ██║██████╔╝██║         ██████╔╝██║     ██║███████╗███████╗
+│    ██║   ██║██╔══██╗██║         ██╔══██╗██║     ██║╚════██║╚════██║
+│    ╚██████╔╝██║  ██║███████╗    ██████╔╝███████╗██║███████║███████║
+│     ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝╚══════╝╚══════╝
+│
+│ yunusemrem@windowslive.com                                    
+│        
+│      TODO:
+           > dosyada benzerlikleri bul algoritma ile
+           > backup alma yazısı kısmını array e ekle         
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Console = Colorful.Console;
