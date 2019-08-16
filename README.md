@@ -1,4 +1,4 @@
-<img src="/Resources/shield.ico" width="100" height="100"> 
+<img  align="left" src="/Resources/shield.ico" width="100" height="100"> 
 
 # URL-Bliss
 
